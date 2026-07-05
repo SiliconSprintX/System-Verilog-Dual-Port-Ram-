@@ -25,7 +25,6 @@ The objective of this project is to design and verify a **Dual Port RAM** capabl
 
 - RTL Source Code
 - SystemVerilog Testbench
-- Simulation Waveforms
 - Screenshots
 - Project Documentation
 

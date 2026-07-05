@@ -87,6 +87,102 @@ The DUT is verified using a custom layered SystemVerilog testbench.
                                    |
                                    v
                                  DUT
+# 🔄 Verification Flow
+
+1. Generator creates random memory transactions.
+2. Driver converts transactions into DUT signals.
+3. Interface connects the verification environment to the DUT.
+4. DUT executes memory operations.
+5. Monitor captures DUT activity.
+6. Reference Model predicts expected behavior.
+7. Scoreboard compares expected and actual outputs.
+8. Final verification report is generated.
+
+---
+
+# 📚 Verification Components
+
+## Generator
+
+- Generates randomized memory transactions.
+- Sends transactions to the driver.
+
+---
+
+## Driver (BFM)
+
+- Receives transactions from the generator.
+- Drives signals onto the DUT interface.
+
+---
+
+## Monitor
+
+- Observes DUT interface signals.
+- Captures actual DUT outputs.
+- Sends collected transactions to the scoreboard.
+
+---
+
+## Reference Model
+
+- Predicts expected RAM behavior.
+- Generates expected read data.
+
+---
+
+## Scoreboard
+
+- Compares DUT output with Reference Model output.
+- Reports PASS or FAIL.
+- Maintains verification statistics.
+
+---
+
+## Environment
+
+Integrates:
+
+- Generator
+- Driver
+- Monitor
+- Reference Model
+- Scoreboard
+
+---
+
+## Interface
+
+Provides communication between
+
+- Testbench
+- Driver
+- DUT
+- Monitor
+
+using virtual interfaces.
+
+---
+
+## Test
+
+Starts the verification environment.
+
+Controls simulation execution.
+
+---
+
+## Top Module
+
+Instantiates
+
+- DUT
+- Interface
+- Testbench
+
+and starts simulation.
+
+---
 
 ## 🔄 Design Flow
 
@@ -164,12 +260,17 @@ The SystemVerilog testbench verifies the functionality of the True Dual Port RAM
 
 - SystemVerilog
 - RTL Design
-- Sequential Logic Design
-- Memory Architecture
-- True Dual Port RAM
 - Functional Verification
-- Waveform Analysis
-- Modular Hardware Design
+- Layered Testbench
+- Object-Oriented Programming (OOP)
+- Transaction-Level Verification
+- Interface
+- Mailbox Communication
+- Events
+- Randomization
+- Scoreboard
+- Reference Model
+- EDA Playground
 
 ---
 
@@ -240,16 +341,21 @@ This project can be extended by implementing:
 ## 🎓 Learning Outcomes
 
 Through this project, I gained practical experience in:
-
 - SystemVerilog Programming
 - RTL Design
-- Memory Architecture Design
-- Sequential Logic Design
-- Module Integration
+- Memory Architecture
+- Layered Verification Methodology
+- Transaction-Level Verification
+- Object-Oriented Programming
+- Randomization
+- Mailbox Communication
+- Interfaces
 - Functional Verification
-- Testbench Development
-- Simulation using EDA Playground
-- Waveform Analysis using EPWave
+- Scoreboard-Based Checking
+- Reference Model Development
+- Waveform Debugging
+- EDA Playground Simulation
+
 
 ---
 

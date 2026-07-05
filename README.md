@@ -65,6 +65,28 @@ The design consists of a shared memory array accessed through two completely ind
 ```
 
 ---
+# 🧪 Verification Architecture
+
+The DUT is verified using a custom layered SystemVerilog testbench.
+
+```text
+                        +----------------------+
+                        |        Test          |
+                        +----------+-----------+
+                                   |
+                        +----------v-----------+
+                        |     Environment      |
+                        +----------+-----------+
+                                   |
+        ----------------------------------------------------------
+        |              |             |            |               |
+        v              v             v            v               v
+   Generator       Driver(BFM)    Monitor   Reference Model   Scoreboard
+        |              |             |            |               |
+        ---------------------- Interface -------------------------
+                                   |
+                                   v
+                                 DUT
 
 ## 🔄 Design Flow
 
